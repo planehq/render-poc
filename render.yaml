@@ -1,0 +1,13 @@
+services:
+  - name: app-a
+    type: web
+    runtime: ruby
+    rootDir: app-a
+    buildCommand: bundle install
+    startCommand: bundle exec rackup config.ru -p $PORT
+  - name: app-b
+    type: web
+    runtime: ruby
+    rootDir: app-b
+    buildCommand: bundle install
+    startCommand: bundle exec rackup config.ru -p $PORT

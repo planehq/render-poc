@@ -1,0 +1,3 @@
+[submodule "app-b"]
+	path = app-b
+	url = git@github.com:planehq/render-app-b.git

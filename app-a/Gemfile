@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+ruby file: ".ruby-version"
+
+gem "rack"
+gem "rackup"
+gem "webrick"
+
