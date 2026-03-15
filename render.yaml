@@ -27,7 +27,7 @@ services:
     rootDir: app-b
     buildCommand: bundle install
     startCommand: bundle exec rackup config.ru -p $PORT
-  - name: app-d
+  - name: app-e
     type: web
     runtime: ruby
     plan: pro ultra
