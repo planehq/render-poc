@@ -3,11 +3,34 @@ services:
     type: web
     runtime: ruby
     rootDir: app-a
+    plan: standard
     buildCommand: bundle install
     startCommand: bundle exec rackup config.ru -p $PORT
   - name: app-b
     type: web
     runtime: ruby
+    plan: pro
+    rootDir: app-b
+    buildCommand: bundle install
+    startCommand: bundle exec rackup config.ru -p $PORT
+  - name: app-c
+    type: web
+    runtime: ruby
+    plan: pro plus
+    rootDir: app-b
+    buildCommand: bundle install
+    startCommand: bundle exec rackup config.ru -p $PORT
+  - name: app-d
+    type: web
+    runtime: ruby
+    plan: pro max
+    rootDir: app-b
+    buildCommand: bundle install
+    startCommand: bundle exec rackup config.ru -p $PORT
+  - name: app-d
+    type: web
+    runtime: ruby
+    plan: pro ultra
     rootDir: app-b
     buildCommand: bundle install
     startCommand: bundle exec rackup config.ru -p $PORT
